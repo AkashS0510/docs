@@ -640,63 +640,46 @@
     },
     
     "/token": {
-      "get": {
+      "post": {
         "summary": "Obtain Access Token",
         "description": "Allows clients to obtain an access token through the authentication process using Username and Password.",
-        "parameters": [
-          {
-            "name": "username",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "The username of the client."
-            }
-          },
-          {
-            "name": "password",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "description": "The password associated with the username."
-            }
-          },
-          {
-            "name": "grant_type",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "description": "OAuth 2.0 grant type."
-            }
-          },
-          {
-            "name": "scope",
-            "in": "query",
-            "required": false,
-            "schema": {
-              "type": "string",
-              "description": "The scope of the access request."
-            }
-          },
-          {
-            "name": "client_id",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "description": "The client ID."
-            }
-          },
-          {
-            "name": "client_secret",
-            "in": "query",
-            "schema": {
-              "type": "string",
-              "description": "The client secret."
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "description": "The username of the client."
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "The password associated with the username."
+                  },
+                  "grant_type": {
+                    "type": "string",
+                    "description": "OAuth 2.0 grant type."
+                  },
+                  "scope": {
+                    "type": "string",
+                    "description": "The scope of the access request."
+                  },
+                  "client_id": {
+                    "type": "string",
+                    "description": "The client ID."
+                  },
+                  "client_secret": {
+                    "type": "string",
+                    "description": "The client secret."
+                  }
+                },
+                "required": ["username", "password"]
+              }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -722,6 +705,5 @@
         }
       }
     }
-    
   }
 }
