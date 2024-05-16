@@ -675,7 +675,7 @@
                     "description": "The client secret."
                   }
                 },
-                "required": ["username", "password", "grant_type", "scope", "client_id", "client_secret"]
+                "required": ["username", "password"]
               }
             }
           }

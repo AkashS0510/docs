@@ -2,11 +2,13 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "CrazyGoldFish",
   "logo": {
-    "dark": "/logo/cgffff.svg",
-    "light": "/logo/cgffff.svg"
-
+    "dark": "/logo/cgf_large.png",
+    "light": "/logo/dark.svg"
+    
   },
-  "favicon": "/favicon.svg",
+  
+  
+  "favicon": "/cgffff.svg",
   "colors": {
     "primary": "#0D9373",
     "light": "#07C983",
