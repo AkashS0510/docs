@@ -1,28 +1,37 @@
 ---
 title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+description: "The Handwritten Notes Evaluation API offers a comprehensive suite of endpoints to facilitate the evaluation process for B2B clients. These endpoints allow clients to submit evaluation requests, retrieve evaluation reports, and access specific reports based on unique identifiers. With customizable filtering options and robust error handling, these endpoints provide a seamless integration experience for developers."
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Base URL
 
-## Welcome
+ https://api-staging.crazygoldfish.com/
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+
+## Swagger UI
+
+ https://api-staging.crazygoldfish.com/docs
+
+## APIs
 
 <Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
+  title="Handwritten Notes Evaluation"
+  icon="book"
+  href="http://localhost:3000/api-reference/endpoint/v1_evaluation_post"
 >
-  View the OpenAPI specification file
 </Card>
 
 ## Authentication
 
 All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+
+Authentication credentials are required to access the API endpoints. Auth 2.0 JWT
+
+Example:
+
+Username : iyc
+
+Password : iyc@09876$
 
 ```json
 "security": [
