@@ -455,7 +455,7 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Json", "html_link or pdf_link"],
+              "enum": ["Json", "html_link"],
               "default": "Json"
             }
           }
