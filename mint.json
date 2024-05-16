@@ -1,9 +1,10 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "CrazyGoldFish",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/cgffff.svg",
+    "light": "/logo/cgffff.svg"
+
   },
   "favicon": "/favicon.svg",
   "colors": {
@@ -23,12 +24,14 @@
       "group": "API Documentation",
       "pages": [
         "api-reference/introduction",
-        "api-reference/authentication_process"
+        "api-reference/authentication_process",
+        "api-reference/endpoint/authentication"
       ]
     },
     {
       "group": "Endpoints",
       "pages": [
+        
         "api-reference/endpoint/v1_evaluation_post",
         "api-reference/endpoint/v1_evaluation",
         "api-reference/endpoint/v1_evaluation_id"

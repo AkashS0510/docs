@@ -10,11 +10,6 @@
       "url": "https://api-staging.crazygoldfish.com"
     }
   ],
-  "security": [
-    {
-      "bearerAuth": []
-    }
-  ],
   "components": {
     "securitySchemes": {
       "bearerAuth": {
@@ -24,7 +19,6 @@
       }
     }
   },
-  
   "paths": {
     "/v1/evaluation": {
       "get": {
@@ -301,7 +295,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
       },
       "post": {
         "summary": "Submit Evaluation Request",
@@ -418,7 +417,12 @@
               }
             }
           }
-        }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
       }
     },
     "/v1/evaluation/{id}": {
@@ -619,6 +623,79 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ]
+
+      }
+    },
+    
+    "/token": {
+      "get": {
+        "summary": "Obtain Access Token",
+        "description": "Allows clients to obtain an access token through the authentication process using Username and Password.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": {
+                    "type": "string",
+                    "description": "The username of the client."
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "The password associated with the username."
+                  },
+                  "grant_type": {
+                    "type": "string",
+                    "description": "OAuth 2.0 grant type."
+                  },
+                  "scope": {
+                    "type": "string",
+                    "description": "The scope of the access request."
+                  },
+                  "client_id": {
+                    "type": "string",
+                    "description": "The client ID."
+                  },
+                  "client_secret": {
+                    "type": "string",
+                    "description": "The client secret."
+                  }
+                },
+                "required": ["username", "password", "grant_type", "scope", "client_id", "client_secret"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "access_token": {
+                      "type": "string",
+                      "description": "The access token to be used for authentication with 30 minutes expire."
+                    },
+                    "token_type": {
+                      "type": "string",
+                      "example": "bearer",
+                      "description": "The token type."
                     }
                   }
                 }
