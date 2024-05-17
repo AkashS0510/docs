@@ -475,7 +475,7 @@
 
 
           {
-            "name": "id",
+            "name": "evaluation_id",
             "in": "path",
             "description": "Unique evaluation ID generated during image submissions.",
             "required": true,
