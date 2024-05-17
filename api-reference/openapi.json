@@ -26,6 +26,16 @@
         "description": "Retrieves evaluation reports based on specified criteria.",
         "parameters": [
           {
+            "name": "accept",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["application/json"],
+              "default": "application/json"
+            }
+          },
+          {
             "name": "client_id",
             "in": "query",
             "description": "Unique identifier assigned to the client accessing the API.",
@@ -41,15 +51,15 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Json", "html_link"],
-              "default": "Json"
+              "enum": ["json", "html_link"],
+              "default": "json"
             }
           },
           {
             "name": "evaluation_type",
             "in": "query",
             "description": "Specifies the type of evaluation report to retrieve.",
-            "required": true,
+            "required": false,
             "schema": {
               "type": "string",
               "enum": ["Basic", "Overlay", "Actionable"],
@@ -108,18 +118,24 @@
             "name": "start_date",
             "in": "query",
             "description": "Start date of the evaluation date range (Default is today).",
+            "required":false,
             "schema": {
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "default": "2024-05-17"
             }
+          
+            
           },
           {
             "name": "end_date",
             "in": "query",
+            "required":false,
             "description": "End date of the evaluation date range (Default is today).",
             "schema": {
               "type": "string",
-              "format": "date"
+              "format": "date",
+              "default": "2024-05-17"
             }
           }
         ],
@@ -145,7 +161,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "request successfully"
+                      "example": "request successful"
                     },
                     "data": {
                       "type": "array",
@@ -281,7 +297,7 @@
                               }
                             }
                           },
-                          "evalution_id": {
+                          "evaluation_id": {
                             "type": "string"
                           },
                           "evaluation_type": {
@@ -301,7 +317,10 @@
             "bearerAuth": []
           }
         ]
-      },
+      }
+    },
+    "/v1/evaluation/": {
+ 
       "post": {
         "summary": "Submit Evaluation Request",
         "description": "Allows B2B clients to submit a request for evaluation directly by providing reference links to the images.",
@@ -383,16 +402,15 @@
                       "example": "Evaluation request submitted successfully"
                     },
                     "data": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "evaluation_id": {
-                            "type": "string"
-                          },
-                          "link": {
-                            "type": "string"
-                          }
+                      "type": "object",
+                      "properties": {
+                        "evaluation_id": {
+                          "type": "string"
+                        },
+                        "evaluation_status": {
+                          "type": "string",
+                          "description": "Status of the evaluation request.",
+                          "example": "pending"
                         }
                       }
                     }
@@ -422,6 +440,18 @@
           {
             "bearerAuth": []
           }
+        ],
+        "parameters": [
+          {
+            "name": "accept",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["application/json"],
+              "default": "application/json"
+            }
+          }
         ]
       }
     },
@@ -430,6 +460,20 @@
         "summary": "Get Evaluation Report by ID",
         "description": "Retrieves an evaluation report based on the provided evaluation ID.",
         "parameters": [
+          {
+            "name": "accept",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": ["application/json"],
+              "default": "application/json"
+            }
+          },
+
+
+
+
           {
             "name": "id",
             "in": "path",
@@ -455,8 +499,8 @@
             "required": true,
             "schema": {
               "type": "string",
-              "enum": ["Json", "html_link"],
-              "default": "Json"
+              "enum": ["json", "html_link"],
+              "default": "json"
             }
           }
         ],
