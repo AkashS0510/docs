@@ -9,7 +9,7 @@
     {
       "url": "https://api-staging.crazygoldfish.com"
     }
-  ],
+  ] ,
   "components": {
     "securitySchemes": {
       "bearerAuth": {
