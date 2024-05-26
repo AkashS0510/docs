@@ -527,7 +527,7 @@
               "description": "Retrieves a specific evaluation report by its ID.",
               "parameters": [
                 {
-                  "name": "id",
+                  "name": "evaluation_id",
                   "in": "path",
                   "description": "Unique evaluation ID generated during image submissions.",
                   "required": true,
