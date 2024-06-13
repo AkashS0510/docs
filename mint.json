@@ -50,8 +50,7 @@
       "pages": [
         "products/Handwritten",
         "products/ielts",
-        "products/toefel",
-        "products/k12"
+        "products/toefel"
         
       ]
     },  
@@ -82,14 +81,7 @@
     "api-reference/endpoint/v1_evaluation_post",
     "api-reference/endpoint/v1_evaluation",
     "api-reference/endpoint/v1_evaluation_id"]
-  },
-  {
-    "group": "K12",
-  "pages":[
-  "api-reference/endpoint/v1_evaluation_post",
-  "api-reference/endpoint/v1_evaluation",
-  "api-reference/endpoint/v1_evaluation_id"]
-    }
+  }
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
