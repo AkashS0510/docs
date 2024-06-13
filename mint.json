@@ -19,25 +19,76 @@
     }
   },
  
-
- 
-  "navigation": [
+"anchors": [
     {
-      "group": "API Documentation",
+        "name": "Website",
+        "icon": "globe",
+        "url": "https://www.crazygoldfish.com/"
+    },
+    {
+      "name": "Product Roadmap",
+      "icon": "dropbox",
+      "url": "https://www.npmjs.com/package/mintlify"
+  },
+  {
+    "name": "API Reference",
+    "icon": "terminal",
+    "url": "api-reference"
+}
+],
+
+  "navigation": [
+
+    {
+      "group": "Welcome",
       "pages": [
-        "api-reference/introduction",
-        "api-reference/authentication_process",
-        "api-reference/endpoint/authentication"
+        "home/introduction"
       ]
     },
     {
-      "group": "Endpoints",
+      "group": "Products",
       "pages": [
+        "products/Handwritten",
+        "products/ielts",
+        "products/toefel",
+        "products/k12"
         
+      ]
+    },  
+    {"group": "Authentication",
+      "pages": [
+        "home/authentication_process",
+        "api-reference/endpoint/authentication"
+
+      ]
+  },
+    {
+          "group": "Handwritten Notes",
+        "pages":[
         "api-reference/endpoint/v1_evaluation_post",
         "api-reference/endpoint/v1_evaluation",
-        "api-reference/endpoint/v1_evaluation_id"
-      ]
+        "api-reference/endpoint/v1_evaluation_id"]
+      },
+      {
+        "group": "TOEFEL",
+      "pages":[
+      "api-reference/endpoint/v1_evaluation_post",
+      "api-reference/endpoint/v1_evaluation",
+      "api-reference/endpoint/v1_evaluation_id"]
+    },
+    {
+      "group": "IELETS",
+    "pages":[
+    "api-reference/endpoint/v1_evaluation_post",
+    "api-reference/endpoint/v1_evaluation",
+    "api-reference/endpoint/v1_evaluation_id"]
+  },
+  {
+    "group": "K12",
+  "pages":[
+  "api-reference/endpoint/v1_evaluation_post",
+  "api-reference/endpoint/v1_evaluation",
+  "api-reference/endpoint/v1_evaluation_id"]
     }
   ],
   "footerSocials": {

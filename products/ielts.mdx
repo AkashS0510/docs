@@ -1,0 +1,37 @@
+---
+title: " IELTS Evaluation "
+description: " Welcome to the IELTS Evaluation API documentation. 👋"
+---
+
+> his API enables you to assess both questions and answers according to IELTS examination standards. You can submit one or multiple questions and answers in various multimedia formats. The API provides scores, feedback, improvement suggestions, and objective error detection.
+Additionaly, customize evaluations with your own rubrics.
+
+
+
+  <Card
+  title="IELTS"
+  icon="books"
+  href="https://docs.crazygoldfish.com/api-reference/endpoint/v1_evaluation_post"
+>
+Evaluatuion API
+</Card>
+<Note>   Currently, this API is available exclusively for evaluating Writing Skills for IELTS Academic and General Training. </Note> 
+ ## Endpoints
+
+### 1. Submit Evaluation Request
+>  Submit a request for evaluation directly by providing questions and respective answers in a json format. The API generates an evaluation report based on the provided data, and returns an acknowledgment along with an evaluation ID.
+```
+POST /v1/ielts/evaluation
+```
+### 2. Get Specific Evaluation Report
+> Retrieve a specific evaluation report using its unique identifier (ID). Clients can access past evaluations or reference specific reports by providing the evaluation ID.
+
+```
+GET /v1/ielts/evaluation/{id}
+```
+### 3. Get All Evaluation Reports
+
+> Retrieve all the evaluation report or for a specific set of handwritten notes. Clients can provide parameters such as student name, class, subject, and date of evaluation to filter the results.
+```
+GET /v1/ielts/evaluation
+```
