@@ -48,7 +48,8 @@
     {
       "group": "Products",
       "pages": [
-        "products/Handwritten",
+       { "group": "K12",
+       "pages": [ "products/Handwritten"]}, 
         "products/ielts",
         "products/toefel"
         
@@ -62,11 +63,14 @@
       ]
   },
     {
-          "group": "Handwritten Notes",
-        "pages":[
+          "group": "K12",
+        "pages":[ 
+        {
+          "group": "Handwritten Evaluation",
+          "pages": [
         "api-reference/endpoint/v1_evaluation_post",
         "api-reference/endpoint/v1_evaluation",
-        "api-reference/endpoint/v1_evaluation_id"]
+        "api-reference/endpoint/v1_evaluation_id"]}]
       },
     {
       "group": "IELTS",

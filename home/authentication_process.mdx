@@ -49,8 +49,8 @@ curl --location 'http://34.49.156.36/token' \
 --header 'accept: application/json' \
 --header 'Content-Type: application/x-www-form-urlencoded' \
 --data-urlencode 'grant_type=' \
---data-urlencode 'username=iyc' \
---data-urlencode 'password=iyc@09876$' \
+--data-urlencode 'username=abc' \
+--data-urlencode 'password=abc@09876' \
 --data-urlencode 'scope=' \
 --data-urlencode 'client_id=' \
 --data-urlencode 'client_secret='
@@ -63,8 +63,8 @@ curl --location 'http://34.49.156.36/token' \
 
 ### Sample Request
 
-```json
-curl --location 'http://34.49.156.36/v1/evaluation/' \
+```bash
+curl --location ' https://api-staging.crazygoldfish.com/v1/evaluation/' \
 --header 'accept: application/json' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNzEyNTY2MDg0fQ.LOWAwIbbZ_hc7Y20CZwsXgSyOTUMoncc51S0a8qmFy0' \
 --header 'Content-Type: application/json' \
