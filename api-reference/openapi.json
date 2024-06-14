@@ -7,10 +7,12 @@
   },
   "servers": [
     {
-      "url": "https://api-staging.crazygoldfish.com"
+      "url": "https://api-staging.crazygoldfish.com",
+      "description": "api-staging"
     },
     {
-      "url": "https://ilets-qv4g7htqyq-el.a.run.app"
+      "url": "https://ilets-qv4g7htqyq-el.a.run.app",
+      "description": "IELTS"
     }
   ],
   "components": {
