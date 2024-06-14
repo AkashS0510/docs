@@ -78,7 +78,7 @@
     {
       "group": "IELETS",
     "pages":[
-    "api-reference/endpoint/v1_evaluation_post",
+      "api-reference/endpoint/v1_ielts_evaluation",
     "api-reference/endpoint/v1_evaluation",
     "api-reference/endpoint/v1_evaluation_id"]
   }

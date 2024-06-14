@@ -20,6 +20,172 @@
     }
   },
   "paths": {
+  "/v1/ielts/evaluation/": {
+    "post": {
+      "summary": "Submit a request for IELTS evaluation",
+      "requestBody": {
+        "required": true,
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "object",
+              "properties": {
+                "client_id": {
+                  "type": "string",
+                  "description": "Unique identifier of the client accessing the API",
+                  "example": "12345ABC"
+                },
+                "institution_id": {
+                  "type": "string",
+                  "description": "Unique identifier of the institution (optional)",
+                  "example": "67890XYZ"
+                },
+                "teacher_id": {
+                  "type": "string",
+                  "description": "Identifier of the teacher (optional)",
+                  "example": "98765LMN"
+                },
+                "parent_id": {
+                  "type": "string",
+                  "description": "Identifier of the parent (optional)",
+                  "example": "54321PQR"
+                },
+                "student_id": {
+                  "type": "string",
+                  "description": "Unique identifier of the student",
+                  "example": "11223STU"
+                },
+                "exam_type": {
+                  "type": "string",
+                  "description": "Type of IELTS exam (AC for Academic, GT for General Training)",
+                  "example": "AC",
+                  "enum": ["AC", "GT"]
+                },
+                "student_name": {
+                  "type": "string",
+                  "description": "Name of the student",
+                  "example": "John Doe"
+                },
+                "image_urls": {
+                  "type": "array",
+                  "description": "URLs of images if available (optional)",
+                  "items": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "example": ["http://example.com/image1.jpg", "http://example.com/image2.jpg"]
+                },
+                "evaluation_text": {
+                  "type": "array",
+                  "description": "List of evaluation questions and answers",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "question_id": {
+                        "type": "string",
+                        "description": "Identifier of the question",
+                        "example": "q1"
+                      },
+                      "question_number": {
+                        "type": "string",
+                        "description": "Number of the question",
+                        "example": "1"
+                      },
+                      "question_section": {
+                        "type": "string",
+                        "description": "Section of the question (currently 'writing')",
+                        "example": "writing",
+                        "enum": ["writing"]
+                      },
+                      "question_type": {
+                        "type": "string",
+                        "description": "Type of the question",
+                        "example": "Describe some visual information in your own words (Task 1)"
+                      },
+                      "question_text": {
+                        "type": "string",
+                        "description": "Text of the question",
+                        "example": "Summarize the points made in the lecture."
+                      },
+                      "question_multimedia_url": {
+                        "type": "string",
+                        "description": "Multimedia URL related to the question (optional)",
+                        "format": "uri"
+                      },
+                      "answer_text": {
+                        "type": "string",
+                        "description": "Text of the answer",
+                        "example": "The lecture discusses the various impacts of climate change."
+                      },
+                      "answer_multimedia_url": {
+                        "type": "string",
+                        "description": "Multimedia URL related to the answer (optional)",
+                        "format": "uri"
+                      },
+                      "custom_rubric_id": {
+                        "type": "string",
+                        "description": "Identifier of custom rubric for scoring",
+                        "example": "1234"
+                      }
+                    },
+                    "required": [
+                      "question_id",
+                      "question_number",
+                      "question_section",
+                      "question_type",
+                      "question_text",
+                      "answer_text"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "client_id",
+                "student_id",
+                "exam_type",
+                "student_name",
+                "evaluation_text"
+              ]
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Evaluation request submitted successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string",
+                      "example": "200"
+                    },
+                    "message": {
+                      "type": "string",
+                      "example": "Evaluation request submitted successfully"
+                    },
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "evaluation_id": {
+                            "type": "string",
+                            "example": "da1b9216fba711eebe1b0242ac130002"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
     "/v1/evaluation/": {
       "post": {
         "summary": "Submit Evaluation Request",
@@ -735,5 +901,6 @@
 
             }
           }
+  
         }
       }
