@@ -68,19 +68,11 @@
         "api-reference/endpoint/v1_evaluation",
         "api-reference/endpoint/v1_evaluation_id"]
       },
-      {
-        "group": "TOEFEL",
-      "pages":[
-      "api-reference/endpoint/v1_evaluation_post",
-      "api-reference/endpoint/v1_evaluation",
-      "api-reference/endpoint/v1_evaluation_id"]
-    },
     {
-      "group": "IELETS",
+      "group": "IELTS",
     "pages":[
-      "api-reference/endpoint/v1_ielts_evaluation",
-    "api-reference/endpoint/v1_evaluation",
-    "api-reference/endpoint/v1_evaluation_id"]
+      "api-reference/endpoint/v1_ielts_evaluation_post",
+        "api-reference/endpoint/v1_ielts_evaluation"]
   }
   ],
   "footerSocials": {
