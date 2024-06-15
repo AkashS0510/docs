@@ -49,11 +49,9 @@
       "group": "Products",
       "pages": [
        { "group": "K12",
-       "pages": [ "products/Handwritten"]}, 
+       "pages": [ "products/Handwritten","products/usecases/k12"]}, 
        { "group": "IELTS",
-       "pages": [ "products/ielts", "products/usecases/ielts"]}, 
-
-        "products/toefel"
+       "pages": [ "products/ielts", "products/usecases/ielts"]}
         
       ]
     },  
@@ -76,9 +74,12 @@
       },
     {
       "group": "IELTS",
-    "pages":[
+    "pages":[{ "group": "IELTS Evaluation", 
+    "pages": [
       "api-reference/endpoint/v1_ielts_evaluation_post",
-        "api-reference/endpoint/v1_ielts_evaluation"]
+        "api-reference/endpoint/v1_ielts_evaluation"
+        ]}
+      ]
   }
   ],
   "footerSocials": {

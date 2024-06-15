@@ -1,6 +1,6 @@
 ---
 title: " IELTS Evaluation "
-sidebarTitle: "Description"
+sidebarTitle: "IELTS Evaluation"
 description: " Welcome to the CrazyGoldFish's IELTS Evaluation API documentation. 👋"
 ---
 
@@ -17,8 +17,19 @@ description: " Welcome to the CrazyGoldFish's IELTS Evaluation API documentation
 >
 Evaluatuion API
 </Card>
-<Note>   Currently, this API is available exclusively for evaluating Writing Skills for IELTS Academic and General Training. </Note> 
- 
+
+## Evaluation Types:
+
+| Section  | Exam Type | Task                                                 | Question Type |
+|----------|-----------|------------------------------------------------------|----------------|
+| Writing  | GT        | A point of view, argument or problem which you need to discuss. | ilt001         |
+|          |           | Writing a letter to Respond to a situation.            | ilt004         |
+|        |       AC    | A point of view, argument or problem which you need to discuss. | ilt002         |
+|          |           | Describe some visual information in your own words.   | ilt003         |
+
+
+ <Note>   Currently, this API is available exclusively for evaluating Writing Skills for IELTS Academic and General Training. </Note> 
+
 # Key Features
 - **Automated Grading** : Efficiently grade IELTS writing tasks with high accuracy.
 
@@ -87,7 +98,7 @@ curl -X 'POST' \
     {
       "question_id": "qid",
       "question_number": "1",
-      "question_section": "Writing2",
+      "question_section": "Writing",
       "question_type": "ilt001",
       "question_text": "Some business observe that new employees who just graduated from a college or university seem to lack interpersonal skills needed for communication with their colleagues. \n\nWhat could be the reason for this? What solution can help address this problem?",
       "question_multimedia_url": "string",

@@ -111,7 +111,7 @@
                         },
                         "question_type": {
                           "type": "string",
-                          "description": "Type of the question.",
+                          "description": "Type of the question. Check product description page for [Question Types details.](https://docs.crazygoldfish.com/products/ielts)",
                           "example": "ilt001",
                           "enum" : ["ilt001","ilt002","ilt003","ilt004"]
                         },
