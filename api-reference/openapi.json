@@ -112,7 +112,8 @@
                         "question_type": {
                           "type": "string",
                           "description": "Type of the question.",
-                          "example": "Describe some visual information in your own words (Task 1)"
+                          "example": "ilt001",
+                          "enum" : ["ilt001","ilt002","ilt003","ilt004"]
                         },
                         "question_text": {
                           "type": "string",
