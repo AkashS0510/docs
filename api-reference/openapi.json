@@ -80,7 +80,7 @@
                     "type": "array",
                     "items": {
                       "type": "string",
-                      "format": "uri"
+                        "deafult": "string"
                     },
                     "description": "List of URLs pointing to the images of the evaluated work (optional).",
                     "example": [
@@ -122,7 +122,8 @@
                         },
                         "question_multimedia_url": {
                           "type": "string",
-                          "description": "URL of multimedia related to the question (optional)."
+                          "description": "URL of multimedia related to the question (optional).",
+                          "default": "string"
                         },
                         "answer_text": {
                           "type": "string",
@@ -132,7 +133,7 @@
                         "answer_multimedia_url": {
                           "type": "string",
                           "description": "URL of multimedia related to the answer (optional).",
-                          "format": "uri"
+                          "default": "string"
                         },
                         "custom_rubric_id": {
                           "type": "string",
