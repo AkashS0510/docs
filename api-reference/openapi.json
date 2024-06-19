@@ -122,8 +122,7 @@
                         },
                         "question_multimedia_url": {
                           "type": "string",
-                          "description": "URL of multimedia related to the question (optional).",
-                          "format": "uri"
+                          "description": "URL of multimedia related to the question (optional)."
                         },
                         "answer_text": {
                           "type": "string",
