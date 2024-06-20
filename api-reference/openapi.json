@@ -15,7 +15,7 @@
       "description": "IELTS"
     },
     {
-      "url": "https://toffel-qv4g7htqyq-el.a.run.app",
+      "url": "https://toefl-uat-qv4g7htqyq-el.a.run.app/",
       "description": "TOEFL"
     }
   ],
@@ -31,7 +31,7 @@
 
   "paths": {
 
-    "/v1/evaluation//{id_}": {
+    "/v1/evaluation/{id_}": {
       "get": {
         "summary": "Retrieve Evaluation Report",
         "description": "Allows B2B clients to retrieve a specific evaluation report using its unique identifier (ID).",
