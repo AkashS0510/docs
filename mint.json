@@ -62,7 +62,9 @@
        { "group": "K12",
        "pages": [ "products/Handwritten","products/usecases/k12"]}, 
        { "group": "IELTS",
-       "pages": [ "products/ielts", "products/usecases/ielts"]}
+       "pages": [ "products/ielts", "products/usecases/ielts"]},
+       { "group": "TOEFL",
+       "pages": [ "products/toefl", "products/usecases/toefl"]}
         
       ]
     },     {"group": "Authentication",
