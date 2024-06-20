@@ -388,7 +388,8 @@
                         "question_type": {
                           "type": "string",
                           "description": "Type of the question. Check product description page for [Question Types details.](https://docs.crazygoldfish.com/products/toefl)",
-                          "example": "Integrated Writing"
+                          "example": "Integrated Writing",
+                          "enum":["tf001","tf002","tf002","tf003","tf004","tf005"]
                         },
                         "question_text": {
                           "type": "string",
