@@ -6,31 +6,37 @@ description: " Welcome to the CrazyGoldFish's IELTS Evaluation API documentation
 
 > Our API enables you to assess both questions and answers according to IELTS examination standards. Whether for Academic or General Training, this API allows you to submit questions and answers in various multimedia formats, providing scores, feedback, improvement suggestions, and objective error detection.
 
-<Tip>Customize the evaluation with your own rubrics for tailored assessments.</Tip>
+<Tip>
+  Customize the evaluation with your own rubrics for tailored assessments.
+</Tip>
 
-
-
-  <Card
+{" "}
+<Card
   title="IELTS"
   icon="books"
   href="https://docs.crazygoldfish.com/api-reference/endpoint/v1_ielts_evaluation_post"
 >
-Evaluatuion API
+  Evaluatuion API
 </Card>
 
 ## Evaluation Types:
 
-| Section  | Exam Type | Task                                                 | Question Type |
-|----------|-----------|------------------------------------------------------|----------------|
-| Writing  | GT        | A point of view, argument or problem which you need to discuss. | ilt001         |
-|          |           | Writing a letter to Respond to a situation.            | ilt004         |
-|        |       AC    | A point of view, argument or problem which you need to discuss. | ilt002         |
-|          |           | Describe some visual information in your own words.   | ilt003         |
+| Section | Exam Type | Task                                                            | Question Type |
+| ------- | --------- | --------------------------------------------------------------- | ------------- |
+| Writing | GT        | A point of view, argument or problem which you need to discuss. | ilt001        |
+|         |           | Writing a letter to Respond to a situation.                     | ilt004        |
+|         | AC        | A point of view, argument or problem which you need to discuss. | ilt002        |
+|         |           | Describe some visual information in your own words.             | ilt003        |
 
-
- <Note>   Currently, this API is available exclusively for evaluating Writing Skills for IELTS Academic and General Training. </Note> 
+{" "}
+<Note>
+  {" "}
+  Currently, this API is available exclusively for evaluating Writing Skills for
+  IELTS Academic and General Training.{" "}
+</Note>{" "}
 
 # Key Features
+
 - **Automated Grading** : Efficiently grade IELTS writing tasks with high accuracy.
 
 - **Detailed Feedback** : Receive comprehensive feedback, including suggestions for improvement and objective error detection.
@@ -43,7 +49,7 @@ Evaluatuion API
 
 - **Integration** : Seamlessly integrate with other educational tools and platforms to create a cohesive evaluation ecosystem.
 
- ## Endpoints
+## Endpoints
 
  <Steps>
   <Step title="Submit Evaluation Request">
@@ -67,13 +73,7 @@ GET /v1/ielts/evaluation/{id}
   </Step>
 </Steps>
 
- 
- 
-
-
-
 ## Sample Request
-
 
 <CodeGroup>
 
@@ -84,7 +84,7 @@ curl -X 'POST' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
-  "client_id": "yuno",
+  "client_id": "cgf",
   "institution_id": "i_01",
   "teacher_id": "T01",
   "parent_id": "P01",
@@ -112,16 +112,14 @@ curl -X 'POST' \
 
 ```json json
 {
-  "client_id": "yuno",
+  "client_id": "cgf",
   "institution_id": "i_01",
   "teacher_id": "T01",
   "parent_id": "P01",
   "student_id": "S01",
   "exam_type": "ilets",
   "student_name": "John",
-  "image_urls": [
-    "string"
-  ],
+  "image_urls": ["string"],
   "evaluation_text": [
     {
       "question_id": "qid",
@@ -137,7 +135,5 @@ curl -X 'POST' \
   ]
 }
 ```
+
 </CodeGroup>
-
-
-
