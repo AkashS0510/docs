@@ -11,7 +11,12 @@
   "analytics": {
     "ga4": {
         "measurementId": "G-RBB1495C8X"
+    },
+    "hotjar": {
+        "hjid": "5030771",
+        "hjsv": "6"
     }
+
 },
 
   "favicon": "logo/cgf.png",
