@@ -65,33 +65,42 @@
        "pages": [ "products/ielts", "products/usecases/ielts"]}
         
       ]
-    },  
-    {"group": "Authentication",
-      "pages": [
-        "home/authentication_process",
-        "api-reference/endpoint/authentication"
+    },     {"group": "Authentication",
+    "pages": [
+      "home/authentication_process",
+      "api-reference/endpoint/authentication"
 
-      ]
-  },
-    {
-          "group": "K12",
-        "pages":[ 
-        {
-          "group": "Handwritten Evaluation",
-          "pages": [
-        "api-reference/endpoint/v1_evaluation_post",
-        "api-reference/endpoint/v1_evaluation",
-        "api-reference/endpoint/v1_evaluation_id"]}]
-      },
+    ]
+},
+  {
+        "group": "K12",
+      "pages":[ 
+      {
+        "group": "Handwritten Evaluation",
+        "pages": [
+      "api-reference/endpoint/v1_evaluation_post",
+      "api-reference/endpoint/v1_evaluation",
+      "api-reference/endpoint/v1_evaluation_id"]}]
+    },
+ 
     {
       "group": "IELTS",
     "pages":[{ "group": "IELTS Evaluation", 
     "pages": [
       "api-reference/endpoint/v1_ielts_evaluation_post",
-        "api-reference/endpoint/v1_ielts_evaluation"
+      "api-reference/endpoint/v1_ielts_evaluation"
         ]}
       ]
-  }
+  },
+  {
+    "group": "TOEFL",
+  "pages":[{ "group": "TOEFL Evaluation", 
+  "pages": [
+    "api-reference/endpoint/v1_toefl_evaluation_post",
+    "api-reference/endpoint/v1_toefl_evaluation"
+      ]}
+    ]
+}
   ],
   "footerSocials": {
     "x": "https://x.com/mintlify",
